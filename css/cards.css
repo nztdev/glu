@@ -1,0 +1,180 @@
+/* cards.css — extended card styles */
+
+/* ─── Full card large view (used in pull reveal) ─── */
+.card-full {
+  width: 180px;
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-full-header {
+  padding: .75rem .85rem .5rem;
+  border-bottom: 2px solid;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.card-full-number {
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  color: var(--text-3);
+  letter-spacing: .06em;
+}
+.card-full-player {
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-3);
+}
+.card-full-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: .03em;
+  line-height: 1.15;
+}
+
+.card-full-body {
+  padding: .6rem .85rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.card-full-era {
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-3);
+}
+
+.card-full-footer {
+  padding: .5rem .85rem .7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-full-rarity {
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.card-full-fks {
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  color: var(--text-3);
+}
+
+/* ─── Rarity-specific card styles ─── */
+.card-full.rarity-legendary .card-full-header { border-color: var(--accent); }
+.card-full.rarity-legendary { background: linear-gradient(180deg, #1a1400 0%, var(--bg-2) 60%); }
+
+.card-full.rarity-epic .card-full-header { border-color: #9b59b6; }
+.card-full.rarity-epic { background: linear-gradient(180deg, #160d1f 0%, var(--bg-2) 60%); }
+
+.card-full.rarity-rare .card-full-header { border-color: #4a90d9; }
+.card-full.rarity-rare { background: linear-gradient(180deg, #0d1520 0%, var(--bg-2) 60%); }
+
+.card-full.rarity-common .card-full-header { border-color: var(--border-2); }
+
+/* ─── Collection grid responsive ─── */
+@media (max-width: 480px) {
+  .player-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .card-mini-title { font-size: .7rem; }
+}
+
+/* ─── Card duplicate indicator ─── */
+.card-mini .card-duplicate-badge {
+  position: absolute;
+  bottom: .4rem;
+  right: .4rem;
+  font-size: .55rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: .05rem .3rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+}
+
+/* ─── Completion overlay on player section ─── */
+.player-section.completed .player-section-name {
+  color: var(--accent);
+}
+
+/* ─── Era badges ─── */
+.era-tag {
+  display: inline-block;
+  padding: .1rem .45rem;
+  border-radius: 3px;
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  background: var(--bg-3);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+}
+.era-tag.era-Youth    { border-color: #27ae60; color: #27ae60; background: rgba(39,174,96,.07); }
+.era-tag.era-Rise     { border-color: #2980b9; color: #2980b9; background: rgba(41,128,185,.07); }
+.era-tag.era-Prime    { border-color: var(--accent); color: var(--accent); background: rgba(240,165,0,.07); }
+.era-tag.era-Legacy   { border-color: #8e44ad; color: #8e44ad; background: rgba(142,68,173,.07); }
+
+/* ─── Timeline connector lines ─── */
+.timeline-connector {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 2px;
+  height: .75rem;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+/* ─── Card hover detail tooltip ─── */
+.card-tooltip {
+  position: absolute;
+  bottom: calc(100% + .5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: .4rem .6rem;
+  font-size: .7rem;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.card-mini:hover .card-tooltip { opacity: 1; }
+
+/* ─── Locked card hover hint ─── */
+.card-mini.locked::before {
+  content: 'Pull more packs to unlock';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .65rem;
+  color: var(--text-3);
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity .2s;
+  z-index: 2;
+  background: rgba(13,15,20,.85);
+  border-radius: var(--radius-lg);
+}
+.card-mini.locked:hover::before { opacity: 1; }
