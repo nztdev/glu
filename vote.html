@@ -505,7 +505,7 @@
   </footer>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js")
+      navigator.serviceWorker.register("service-worker.js", { scope: "./" })
         .catch(e => console.warn("SW registration failed:", e));
     }
   </script>

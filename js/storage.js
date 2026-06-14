@@ -139,6 +139,10 @@ const Storage = (() => {
   }
 
   // --- Pack Timing ---
+  let _cooldownMs = 6 * 60 * 60 * 1000; // default 6 hours, overridable from voteConfig
+
+  function _setCooldown(ms) { _cooldownMs = ms; }
+
   function getLastPackTime() {
     return get(KEYS.LAST_PACK) || 0;
   }
@@ -148,15 +152,11 @@ const Storage = (() => {
   }
 
   function canOpenPack() {
-    const last = getLastPackTime();
-    const cooldown = 6 * 60 * 60 * 1000; // 6 hours
-    return Date.now() - last > cooldown;
+    return Date.now() - getLastPackTime() > _cooldownMs;
   }
 
   function timeUntilNextPack() {
-    const last = getLastPackTime();
-    const cooldown = 6 * 60 * 60 * 1000;
-    const remaining = cooldown - (Date.now() - last);
+    const remaining = _cooldownMs - (Date.now() - getLastPackTime());
     return Math.max(0, remaining);
   }
 
@@ -193,6 +193,7 @@ const Storage = (() => {
     getVotes, setVote, getVote,
     getLastPackTime, setLastPackTime, canOpenPack, timeUntilNextPack,
     logPull, getStats, reset,
+    _setCooldown,
     KEYS
   };
 })();

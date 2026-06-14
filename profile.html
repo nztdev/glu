@@ -416,7 +416,7 @@
         { value: triviaCorrect + '/' + triviaTotal, label: 'Trivia Correct' },
         { value: completedTimelines, label: 'Timelines Done' },
         { value: weight, label: 'Vote Weight' },
-        { value: FKS.getCompletedRivalries(allCards).length, label: 'Rivalries' },
+        { value: App.getCompletedRivalries().length, label: 'Rivalries' },
       ];
       const statsGrid = document.getElementById('stats-grid');
       statsGrid.innerHTML = '';
@@ -570,7 +570,7 @@
   </footer>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js")
+      navigator.serviceWorker.register("service-worker.js", { scope: "./" })
         .catch(e => console.warn("SW registration failed:", e));
     }
   </script>

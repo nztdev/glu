@@ -1,0 +1,1302 @@
+[
+  {
+    "cardId": "pele_01",
+    "playerId": "pele",
+    "question": "What was Pelé's real first name?",
+    "options": [
+      "Eduardo",
+      "Edson",
+      "Ernesto",
+      "Eládio"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_02",
+    "playerId": "pele",
+    "question": "Which city did Pelé's family move to, where he developed as a youth footballer?",
+    "options": [
+      "Rio de Janeiro",
+      "São Paulo",
+      "Bauru",
+      "Três Corações"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_03",
+    "playerId": "pele",
+    "question": "How old was Pelé when he made his professional debut for Santos?",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_04",
+    "playerId": "pele",
+    "question": "Against which country did Pelé score a hat-trick in the 1958 World Cup semi-final?",
+    "options": [
+      "Sweden",
+      "West Germany",
+      "France",
+      "Wales"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "pele_05",
+    "playerId": "pele",
+    "question": "In which African country was a ceasefire allegedly arranged so people could watch Pelé play?",
+    "options": [
+      "Ghana",
+      "Nigeria",
+      "Ivory Coast",
+      "Congo"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_06",
+    "playerId": "pele",
+    "question": "Against which club did Pelé score his famous 1,000th goal?",
+    "options": [
+      "Flamengo",
+      "Vasco da Gama",
+      "Corinthians",
+      "Fluminense"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_07",
+    "playerId": "pele",
+    "question": "How many goals did Pelé score at the 1970 World Cup?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "7"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "pele_08",
+    "playerId": "pele",
+    "question": "In which years did Santos win the Copa Libertadores with Pelé?",
+    "options": [
+      "1960 and 1961",
+      "1962 and 1963",
+      "1964 and 1965",
+      "1966 and 1967"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_09",
+    "playerId": "pele",
+    "question": "Which club did Pelé join in 1975 to help grow football in North America?",
+    "options": [
+      "LA Galaxy",
+      "Chicago Fire",
+      "New York Cosmos",
+      "Washington Diplomats"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "pele_10",
+    "playerId": "pele",
+    "question": "How many FIFA World Cup titles did Pelé win during his career?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "maradona_01",
+    "playerId": "maradona",
+    "question": "In which area of Buenos Aires did Maradona grow up?",
+    "options": [
+      "San Telmo",
+      "La Boca",
+      "Villa Fiorito",
+      "Palermo"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_02",
+    "playerId": "maradona",
+    "question": "How old was Maradona when he made his professional debut for Argentinos Juniors?",
+    "options": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_03",
+    "playerId": "maradona",
+    "question": "For how much was Maradona sold to Barcelona in 1982?",
+    "options": [
+      "£3 million",
+      "£5 million",
+      "£7 million",
+      "£10 million"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_04",
+    "playerId": "maradona",
+    "question": "Which Athletic Bilbao defender fractured Maradona's ankle with a brutal foul?",
+    "options": [
+      "Joseba Etxeberria",
+      "Andoni Goikoetxea",
+      "Txetxu Rojo",
+      "Dani"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_05",
+    "playerId": "maradona",
+    "question": "In what year did Maradona lead Napoli to their first ever Serie A title?",
+    "options": [
+      "1985",
+      "1986",
+      "1987",
+      "1988"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_06",
+    "playerId": "maradona",
+    "question": "How many goals did Maradona score at the 1986 World Cup?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "maradona_07",
+    "playerId": "maradona",
+    "question": "How many England outfield players did Maradona beat on his dribble for the 'Goal of the Century'?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "maradona_08",
+    "playerId": "maradona",
+    "question": "Which European trophy did Maradona win with Napoli in 1989?",
+    "options": [
+      "Cup Winners' Cup",
+      "UEFA Cup",
+      "European Cup",
+      "Super Cup"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_09",
+    "playerId": "maradona",
+    "question": "Which country eliminated Maradona's Argentina at the 2010 World Cup quarter-finals?",
+    "options": [
+      "Brazil",
+      "Spain",
+      "Germany",
+      "Netherlands"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "maradona_10",
+    "playerId": "maradona",
+    "question": "What was the Napoli stadium renamed after Maradona's death?",
+    "options": [
+      "Stadio Diego Armando Maradona",
+      "Stadio Napoli",
+      "Stadio San Paolo Maradona",
+      "Arena Maradona"
+    ],
+    "answer": 0,
+    "fksReward": 10
+  },
+  {
+    "cardId": "cruyff_01",
+    "playerId": "cruyff",
+    "question": "How far from Ajax's stadium was Cruyff born?",
+    "options": [
+      "50 metres",
+      "200 metres",
+      "500 metres",
+      "1 kilometre"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_02",
+    "playerId": "cruyff",
+    "question": "Which coach arrived at Ajax in 1965 and developed Total Football with Cruyff?",
+    "options": [
+      "Stefan Kovacs",
+      "Rinus Michels",
+      "Ernst Happel",
+      "Johan Neeskens"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_03",
+    "playerId": "cruyff",
+    "question": "How many consecutive European Cups did Ajax win with Cruyff?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "cruyff_04",
+    "playerId": "cruyff",
+    "question": "Why did Cruyff famously refuse to sign for Real Madrid?",
+    "options": [
+      "Money dispute",
+      "Association with Franco's regime",
+      "Preferred Barcelona's style",
+      "Contract with Ajax"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_05",
+    "playerId": "cruyff",
+    "question": "In which tournament did Cruyff famously debut the 'Cruyff Turn'?",
+    "options": [
+      "1970 World Cup",
+      "1972 European Championship",
+      "1974 World Cup",
+      "1973 European Cup Final"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_06",
+    "playerId": "cruyff",
+    "question": "What happened before West Germany touched the ball in the 1974 World Cup Final?",
+    "options": [
+      "Cruyff scored",
+      "Netherlands were awarded a penalty and scored",
+      "Neeskens was injured",
+      "The referee stopped play"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "cruyff_07",
+    "playerId": "cruyff",
+    "question": "Which future manager did Cruyff give his professional debut to at Barcelona?",
+    "options": [
+      "Luis Enrique",
+      "Pep Guardiola",
+      "Frank Rijkaard",
+      "Ronald Koeman"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_08",
+    "playerId": "cruyff",
+    "question": "Which academy did Cruyff restructure at Barcelona, producing generations of world-class talent?",
+    "options": [
+      "La Cantera",
+      "La Masia",
+      "El Masnou",
+      "Sant Joan Despí"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_09",
+    "playerId": "cruyff",
+    "question": "What condition was Cruyff diagnosed with in 1991 that led to heart surgery?",
+    "options": [
+      "Diabetes",
+      "Heart disease",
+      "A lung condition",
+      "Arthritis"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "cruyff_10",
+    "playerId": "cruyff",
+    "question": "What number did Ajax and Barcelona players wear on their backs at Cruyff's memorial match?",
+    "options": [
+      "9",
+      "10",
+      "14",
+      "17"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "beckenbauer_01",
+    "playerId": "beckenbauer",
+    "question": "Which rival Munich club did Beckenbauer almost join before choosing Bayern?",
+    "options": [
+      "TSV 1860 Munich",
+      "FC Wacker",
+      "SpVgg Unterhaching",
+      "FC Augsburg"
+    ],
+    "answer": 0,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_02",
+    "playerId": "beckenbauer",
+    "question": "What original position did Beckenbauer play before moving to sweeper/libero?",
+    "options": [
+      "Goalkeeper",
+      "Full-back",
+      "Forward",
+      "Centre-back"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_03",
+    "playerId": "beckenbauer",
+    "question": "What is the Italian term for the sweeper position Beckenbauer redefined?",
+    "options": [
+      "Trequartista",
+      "Regista",
+      "Libero",
+      "Mezzala"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_04",
+    "playerId": "beckenbauer",
+    "question": "Which quality most defined Beckenbauer's leadership style on the pitch?",
+    "options": [
+      "Vocal aggression",
+      "Tactical instruction",
+      "Composure under pressure",
+      "Physical dominance"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_05",
+    "playerId": "beckenbauer",
+    "question": "What injury did Beckenbauer play through in the 1974 World Cup semi-final?",
+    "options": [
+      "Broken wrist",
+      "Knee ligament damage",
+      "Dislocated shoulder",
+      "Fractured rib"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "beckenbauer_06",
+    "playerId": "beckenbauer",
+    "question": "How many consecutive European Cups did Bayern win with Beckenbauer?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_07",
+    "playerId": "beckenbauer",
+    "question": "Beckenbauer is one of only two people to win the World Cup as both player and captain AND as manager. Who is the other?",
+    "options": [
+      "Zinedine Zidane",
+      "Didier Deschamps",
+      "Michel Platini",
+      "Fabio Capello"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "beckenbauer_08",
+    "playerId": "beckenbauer",
+    "question": "What was the German media's nickname for the atmosphere of the 2006 World Cup in Germany?",
+    "options": [
+      "The Golden Summer",
+      "The Summer Fairy Tale",
+      "The Summer of Football",
+      "Germany's Finest Hour"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_09",
+    "playerId": "beckenbauer",
+    "question": "What is Franz Beckenbauer's famous nickname?",
+    "options": [
+      "Der General",
+      "Der Kaiser",
+      "Der Meister",
+      "Der Kapitän"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "beckenbauer_10",
+    "playerId": "beckenbauer",
+    "question": "How many World Cups was Beckenbauer directly involved in winning (as player, manager, and host)?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "zidane_01",
+    "playerId": "zidane",
+    "question": "What is the name of the housing project in Marseille where Zidane grew up?",
+    "options": [
+      "Les Quartiers Nord",
+      "La Castellane",
+      "La Busserine",
+      "La Bricarde"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "zidane_02",
+    "playerId": "zidane",
+    "question": "At what age did Zidane make his professional debut for Cannes?",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "zidane_03",
+    "playerId": "zidane",
+    "question": "Which Italian club signed Zidane from Bordeaux in 1996?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "zidane_04",
+    "playerId": "zidane",
+    "question": "How many FIFA World Player of the Year awards did Zidane win during his career?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "zidane_05",
+    "playerId": "zidane",
+    "question": "How did Zidane score his two goals in the 1998 World Cup Final?",
+    "options": [
+      "Free kicks",
+      "Headers from corners",
+      "Long-range shots",
+      "Penalties"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "zidane_06",
+    "playerId": "zidane",
+    "question": "Against which team did Zidane score his famous volley in the 2002 Champions League Final?",
+    "options": [
+      "Bayern Munich",
+      "Manchester United",
+      "Bayer Leverkusen",
+      "Valencia"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "zidane_07",
+    "playerId": "zidane",
+    "question": "Which famous full-back was Zidane's teammate in the Real Madrid Galácticos era?",
+    "options": [
+      "Cafu",
+      "Roberto Carlos",
+      "Cafú",
+      "Lilian Thuram"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "zidane_08",
+    "playerId": "zidane",
+    "question": "What type of penalty did Zidane score in the 2006 World Cup Final before his famous headbutt?",
+    "options": [
+      "Power shot",
+      "Panenka chip",
+      "Side-foot pass",
+      "Left-foot drive"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "zidane_09",
+    "playerId": "zidane",
+    "question": "How many consecutive Champions League titles did Zidane win as Real Madrid manager?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "zidane_10",
+    "playerId": "zidane",
+    "question": "Which award did Zidane receive at the 2006 World Cup despite his headbutt in the Final?",
+    "options": [
+      "Golden Boot",
+      "Golden Ball (best player)",
+      "Fair Play Award",
+      "Silver Boot"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldinho_01",
+    "playerId": "ronaldinho",
+    "question": "How did Ronaldinho's father die when Ronaldinho was a child?",
+    "options": [
+      "Car accident",
+      "Drowned in the family's swimming pool",
+      "Illness",
+      "Work accident at the steel plant"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_02",
+    "playerId": "ronaldinho",
+    "question": "At what age did Ronaldinho make his professional debut for Grêmio?",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_03",
+    "playerId": "ronaldinho",
+    "question": "From which club did Barcelona sign Ronaldinho in 2003?",
+    "options": [
+      "Grêmio",
+      "Paris Saint-Germain",
+      "Santos",
+      "Flamengo"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_04",
+    "playerId": "ronaldinho",
+    "question": "What extraordinary thing happened when Ronaldinho scored twice at Real Madrid's Bernabéu in 2005?",
+    "options": [
+      "He celebrated with Real Madrid fans",
+      "Real Madrid's own fans gave him a standing ovation",
+      "He scored a hat-trick and donated the ball to the crowd",
+      "The referee stopped the match to applaud"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldinho_05",
+    "playerId": "ronaldinho",
+    "question": "How many Ballon d'Or awards did Ronaldinho win?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_06",
+    "playerId": "ronaldinho",
+    "question": "Against which English club did Ronaldinho produce one of his most celebrated Champions League performances?",
+    "options": [
+      "Manchester United",
+      "Liverpool",
+      "Chelsea",
+      "Arsenal"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_07",
+    "playerId": "ronaldinho",
+    "question": "Whose famous positioning error allowed Ronaldinho's free-kick to loop in for Brazil against England in 2002?",
+    "options": [
+      "Nigel Martyn",
+      "Paul Robinson",
+      "David James",
+      "David Seaman"
+    ],
+    "answer": 3,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_08",
+    "playerId": "ronaldinho",
+    "question": "Which Italian club did Ronaldinho join when he left Barcelona in 2008?",
+    "options": [
+      "Inter Milan",
+      "Juventus",
+      "AC Milan",
+      "Roma"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_09",
+    "playerId": "ronaldinho",
+    "question": "Which aspect of football did Ronaldinho become the global symbol for after his professional peak?",
+    "options": [
+      "Tactical discipline",
+      "Expressive street football and freestyle",
+      "Physical fitness",
+      "Goal scoring records"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldinho_10",
+    "playerId": "ronaldinho",
+    "question": "Which future GOAT did Ronaldinho mentor during their time together at Barcelona?",
+    "options": [
+      "Andrés Iniesta",
+      "Xavi Hernández",
+      "Lionel Messi",
+      "Samuel Eto'o"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldo_r7_01",
+    "playerId": "ronaldo_r7",
+    "question": "Which former Brazil international spotted young Ronaldo and helped arrange his first professional trial?",
+    "options": [
+      "Pelé",
+      "Zico",
+      "Jairzinho",
+      "Romário"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_02",
+    "playerId": "ronaldo_r7",
+    "question": "How many goals did Ronaldo score in 47 games for Cruzeiro?",
+    "options": [
+      "28",
+      "36",
+      "44",
+      "52"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_03",
+    "playerId": "ronaldo_r7",
+    "question": "How many goals did Ronaldo score in 58 games on loan at PSV Eindhoven?",
+    "options": [
+      "38",
+      "44",
+      "54",
+      "61"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_04",
+    "playerId": "ronaldo_r7",
+    "question": "How many goals did Ronaldo score in his one season at Barcelona (all competitions)?",
+    "options": [
+      "31",
+      "39",
+      "47",
+      "53"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_05",
+    "playerId": "ronaldo_r7",
+    "question": "How many FIFA World Player of the Year awards did Ronaldo win during his Inter Milan years?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_06",
+    "playerId": "ronaldo_r7",
+    "question": "What mysterious event affected Ronaldo before the 1998 World Cup Final?",
+    "options": [
+      "He was poisoned",
+      "He suffered a convulsive episode in his hotel room",
+      "He had a serious injury in training",
+      "He received death threats"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldo_r7_07",
+    "playerId": "ronaldo_r7",
+    "question": "How many goals did Ronaldo score at the 2002 World Cup?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 3,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldo_r7_08",
+    "playerId": "ronaldo_r7",
+    "question": "How many total goals did Ronaldo score in 127 appearances for Real Madrid?",
+    "options": [
+      "61",
+      "72",
+      "83",
+      "91"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_09",
+    "playerId": "ronaldo_r7",
+    "question": "Approximately how many professional goals did Ronaldo score across his entire career?",
+    "options": [
+      "242",
+      "298",
+      "352",
+      "401"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_r7_10",
+    "playerId": "ronaldo_r7",
+    "question": "How many FIFA World Cup titles did Ronaldo Nazário win during his career?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "answer": 1,
+    "fksReward": 10
+  },
+  {
+    "cardId": "messi_01",
+    "playerId": "messi",
+    "question": "Which family member first coached a young Lionel Messi at his neighbourhood club Grandoli?",
+    "options": [
+      "His mother Celia",
+      "His father Jorge",
+      "His grandmother Celia",
+      "His brother Rodrigo"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_02",
+    "playerId": "messi",
+    "question": "What medical condition did young Messi have that required expensive treatment?",
+    "options": [
+      "Heart defect",
+      "Growth hormone deficiency",
+      "Bone density condition",
+      "A metabolic disorder"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_03",
+    "playerId": "messi",
+    "question": "At what age did Messi arrive at Barcelona's La Masia academy?",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_04",
+    "playerId": "messi",
+    "question": "Against which rival did Messi make his La Liga debut for Barcelona in October 2004?",
+    "options": [
+      "Real Madrid",
+      "Athletic Bilbao",
+      "Espanyol",
+      "Valencia"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_05",
+    "playerId": "messi",
+    "question": "What tactical position did Guardiola deploy Messi in, creating a revolutionary system?",
+    "options": [
+      "Centre-back",
+      "False nine",
+      "Inverted winger",
+      "Second striker"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_06",
+    "playerId": "messi",
+    "question": "How many goals did Messi score in all competitions during his record-breaking 2011-12 season?",
+    "options": [
+      "73",
+      "82",
+      "91",
+      "98"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "messi_07",
+    "playerId": "messi",
+    "question": "Against which country did Argentina lose the 2014 World Cup Final, eliminating Messi's best early chance of international glory?",
+    "options": [
+      "Brazil",
+      "France",
+      "Germany",
+      "Netherlands"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_08",
+    "playerId": "messi",
+    "question": "How old was Messi when he finally won his first major international trophy at the 2021 Copa América?",
+    "options": [
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "messi_09",
+    "playerId": "messi",
+    "question": "How many goals did Messi score at the 2022 World Cup?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "messi_10",
+    "playerId": "messi",
+    "question": "How many Ballon d'Or awards has Messi won in total?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldo_cr7_01",
+    "playerId": "ronaldo_cr7",
+    "question": "After whom was Cristiano Ronaldo partially named?",
+    "options": [
+      "Ronaldo Nazário",
+      "Ronald McDonald",
+      "Ronald Reagan",
+      "Ronaldinho"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_02",
+    "playerId": "ronaldo_cr7",
+    "question": "Which manager watched Ronaldo in a pre-season game and immediately demanded he be signed?",
+    "options": [
+      "Arsène Wenger",
+      "José Mourinho",
+      "Alex Ferguson",
+      "Claudio Ranieri"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_03",
+    "playerId": "ronaldo_cr7",
+    "question": "Which iconic shirt number did Ronaldo request at Manchester United, worn previously by Cantona and Beckham?",
+    "options": [
+      "10",
+      "7",
+      "11",
+      "9"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_04",
+    "playerId": "ronaldo_cr7",
+    "question": "In which city was the 2008 Champions League Final played, where Ronaldo won the trophy with United?",
+    "options": [
+      "Rome",
+      "Moscow",
+      "Barcelona",
+      "Wembley"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_05",
+    "playerId": "ronaldo_cr7",
+    "question": "For how much did Real Madrid sign Ronaldo from Manchester United in 2009?",
+    "options": [
+      "£60 million",
+      "£70 million",
+      "£80 million",
+      "£95 million"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_06",
+    "playerId": "ronaldo_cr7",
+    "question": "How many Champions League goals has Ronaldo scored, making him the competition's all-time record holder?",
+    "options": [
+      "110",
+      "125",
+      "140",
+      "155"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "ronaldo_cr7_07",
+    "playerId": "ronaldo_cr7",
+    "question": "How long did Ronaldo play in the Euro 2016 Final before being forced off injured?",
+    "options": [
+      "15 minutes",
+      "25 minutes",
+      "35 minutes",
+      "45 minutes"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_08",
+    "playerId": "ronaldo_cr7",
+    "question": "How many goals did Ronaldo score in 98 appearances for Juventus?",
+    "options": [
+      "61",
+      "71",
+      "81",
+      "91"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_09",
+    "playerId": "ronaldo_cr7",
+    "question": "Approximately how many international goals has Ronaldo scored for Portugal, giving him the world record?",
+    "options": [
+      "100+",
+      "115+",
+      "130+",
+      "145+"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "ronaldo_cr7_10",
+    "playerId": "ronaldo_cr7",
+    "question": "Approximately how many social media followers does Ronaldo have across all platforms?",
+    "options": [
+      "200 million",
+      "350 million",
+      "600 million",
+      "900 million"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_01",
+    "playerId": "iniesta",
+    "question": "How many people lived in Fuentealbilla, the village where Iniesta was born?",
+    "options": [
+      "500",
+      "1,000",
+      "2,000",
+      "5,000"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_02",
+    "playerId": "iniesta",
+    "question": "At what age did Iniesta join Barcelona's La Masia academy?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_03",
+    "playerId": "iniesta",
+    "question": "At what age did Iniesta make his first-team debut for Barcelona?",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_04",
+    "playerId": "iniesta",
+    "question": "Which fellow La Masia graduate formed Iniesta's famous midfield partnership at Barcelona?",
+    "options": [
+      "Sergio Busquets",
+      "Cesc Fàbregas",
+      "Xavi Hernández",
+      "Dani Alves"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_05",
+    "playerId": "iniesta",
+    "question": "How many trophies did Barcelona win in the historic 2008-09 season under Guardiola?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "iniesta_06",
+    "playerId": "iniesta",
+    "question": "To whom did Iniesta dedicate his 2010 World Cup Final goal by revealing a message under his shirt?",
+    "options": [
+      "His parents",
+      "His future wife",
+      "His friend Dani Jarque",
+      "The people of Fuentealbilla"
+    ],
+    "answer": 2,
+    "fksReward": 10
+  },
+  {
+    "cardId": "iniesta_07",
+    "playerId": "iniesta",
+    "question": "Against which English club did Iniesta score a crucial last-minute Champions League semi-final goal in 2009?",
+    "options": [
+      "Manchester United",
+      "Arsenal",
+      "Chelsea",
+      "Liverpool"
+    ],
+    "answer": 2,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_08",
+    "playerId": "iniesta",
+    "question": "Which Japanese club did Iniesta join when he left Barcelona in 2018?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Gamba Osaka",
+      "Kashima Antlers",
+      "Vissel Kobe"
+    ],
+    "answer": 3,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_09",
+    "playerId": "iniesta",
+    "question": "At which two major tournaments did Iniesta win the best player award?",
+    "options": [
+      "2006 World Cup and Euro 2008",
+      "2010 World Cup and Euro 2012",
+      "Euro 2012 and 2014 World Cup",
+      "2010 World Cup and Euro 2016"
+    ],
+    "answer": 1,
+    "fksReward": 5
+  },
+  {
+    "cardId": "iniesta_10",
+    "playerId": "iniesta",
+    "question": "How many La Liga titles did Iniesta win with Barcelona during his career?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 3,
+    "fksReward": 10
+  }
+]

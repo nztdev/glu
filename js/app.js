@@ -3,7 +3,10 @@
 const App = (() => {
   let _players = [];
   let _cards = [];
+  let _trivia = [];
   let _categories = [];
+  let _rivalries = [];
+  let _voteConfig = {};
   let _ready = false;
   const _listeners = [];
 
@@ -15,11 +18,38 @@ const App = (() => {
 
   async function init() {
     try {
-      [_players, _cards, _categories] = await Promise.all([
+      [_players, _cards, _trivia, _categories, _rivalries, _voteConfig] = await Promise.all([
         loadJSON('data/players.json'),
         loadJSON('data/cards.json'),
+        loadJSON('data/trivia.json'),
         loadJSON('data/categories.json'),
+        loadJSON('data/rivalries.json'),
+        loadJSON('data/voteConfig.json'),
       ]);
+
+      // Attach trivia back to cards at runtime (keeps data files clean but UI access simple)
+      _trivia.forEach(t => {
+        const card = _cards.find(c => c.id === t.cardId);
+        if (card) {
+          card._trivia = t;
+        }
+      });
+
+      // Apply FKS thresholds from voteConfig to categories
+      const thresholds = _voteConfig.categoryFKSThresholds || {};
+      _categories.forEach(cat => {
+        if (thresholds[cat.id] !== undefined) {
+          cat.minFKS = thresholds[cat.id];
+        }
+      });
+
+      // Apply pack settings to storage/gacha constants
+      if (_voteConfig.packSettings) {
+        const ps = _voteConfig.packSettings;
+        if (ps.cooldownHours) {
+          Storage._setCooldown(ps.cooldownHours * 60 * 60 * 1000);
+        }
+      }
 
       // Run integrity checks
       AntiCheat.repairIfTampered(_cards);
@@ -42,13 +72,18 @@ const App = (() => {
     else _listeners.push(fn);
   }
 
-  function getPlayers() { return _players; }
-  function getCards() { return _cards; }
+  function getPlayers()    { return _players; }
+  function getCards()      { return _cards; }
+  function getTrivia()     { return _trivia; }
   function getCategories() { return _categories; }
+  function getRivalries()  { return _rivalries; }
+  function getVoteConfig() { return _voteConfig; }
 
-  function getPlayer(id) { return _players.find(p => p.id === id); }
-  function getCard(id) { return _cards.find(c => c.id === id); }
+  function getPlayer(id)   { return _players.find(p => p.id === id); }
+  function getCard(id)     { return _cards.find(c => c.id === id); }
   function getCategory(id) { return _categories.find(c => c.id === id); }
+  function getRivalry(id)  { return _rivalries.find(r => r.id === id); }
+  function getCardTrivia(cardId) { return _trivia.find(t => t.cardId === cardId); }
 
   function getPlayerCards(playerId) {
     return _cards.filter(c => c.playerId === playerId).sort((a, b) => a.cardNumber - b.cardNumber);
@@ -72,8 +107,23 @@ const App = (() => {
     return { total, collected, percent: total > 0 ? collected / total : 0 };
   }
 
+  // Rivalries helpers
+  function checkRivalryComplete(rivalryId) {
+    const rivalry = getRivalry(rivalryId);
+    if (!rivalry) return false;
+    return (
+      getPlayerProgress(rivalry.playerA).percent === 1 &&
+      getPlayerProgress(rivalry.playerB).percent === 1
+    );
+  }
+
+  function getCompletedRivalries() {
+    return _rivalries.filter(r => checkRivalryComplete(r.id));
+  }
+
   // Milestones: check and award FKS for completions
   const _awarded = JSON.parse(localStorage.getItem('fgg_milestones') || '{}');
+
   function _checkProgressMilestones() {
     _players.forEach(p => {
       const progress = getPlayerProgress(p.id);
@@ -86,16 +136,12 @@ const App = (() => {
       }
     });
 
-    FKS.getAllRivalries().forEach(([a, b]) => {
-      const key = `rivalry_${a}_${b}`;
-      if (!_awarded[key]) {
-        if (FKS.checkRivalryComplete(a, b, _cards)) {
-          _awarded[key] = true;
-          const nameA = (_players.find(p => p.id === a) || {}).name || a;
-          const nameB = (_players.find(p => p.id === b) || {}).name || b;
-          FKS.award('RIVALRY_COMPLETE', `${nameA} & ${nameB}`);
-          localStorage.setItem('fgg_milestones', JSON.stringify(_awarded));
-        }
+    _rivalries.forEach(r => {
+      const key = `rivalry_${r.id}`;
+      if (!_awarded[key] && checkRivalryComplete(r.id)) {
+        _awarded[key] = true;
+        FKS.award('RIVALRY_COMPLETE', r.name);
+        localStorage.setItem('fgg_milestones', JSON.stringify(_awarded));
       }
     });
   }
@@ -106,8 +152,7 @@ const App = (() => {
     if (!category) return [];
 
     // Culturally-informed baseline scores per category.
-    // These reflect real-world polling consensus rather than arbitrary seeds.
-    // A user's vote weight is added on top of these baselines.
+    // Reflect real-world polling consensus. User vote weight added on top.
     const BASELINES = {
       overall: {
         messi: 3800, ronaldo_cr7: 3500, maradona: 2800, pele: 2600,
@@ -143,31 +188,28 @@ const App = (() => {
       },
     };
 
-    // Stable per-player noise seeded on playerId + categoryId (not array index)
-    // so results don't shift when eligible player order changes
     function playerNoise(playerId, catId) {
       const str = playerId + catId;
       let h = 0;
       for (let i = 0; i < str.length; i++) {
         h = Math.imul(31, h) + str.charCodeAt(i) | 0;
       }
-      return (Math.abs(h) % 300); // ±150 variance band
+      return (Math.abs(h) % 300);
     }
 
     const eligiblePlayers = category.eligiblePlayers
       .map(id => _players.find(p => p.id === id)).filter(Boolean);
-    const userVote = Storage.getVote(categoryId);
+    const userVote   = Storage.getVote(categoryId);
     const userWeight = FKS.getVoteWeight(Storage.getFKSTotal(), _cards);
     const catBaselines = BASELINES[categoryId] || {};
 
     const scores = {};
     eligiblePlayers.forEach(p => {
-      const base = catBaselines[p.id] || 800;
+      const base  = catBaselines[p.id] || 800;
       const noise = playerNoise(p.id, categoryId);
       scores[p.id] = base + noise;
     });
 
-    // Apply user's vote on top of baseline
     if (userVote && scores[userVote] !== undefined) {
       scores[userVote] += userWeight;
     }
@@ -175,9 +217,9 @@ const App = (() => {
     const total = Object.values(scores).reduce((s, v) => s + v, 0);
     return eligiblePlayers
       .map(p => ({
-        player: p,
-        score: scores[p.id],
-        percent: total > 0 ? ((scores[p.id] / total) * 100).toFixed(1) : '0.0',
+        player:     p,
+        score:      scores[p.id],
+        percent:    total > 0 ? ((scores[p.id] / total) * 100).toFixed(1) : '0.0',
         isUserVote: p.id === userVote,
       }))
       .sort((a, b) => b.score - a.score);
@@ -185,10 +227,11 @@ const App = (() => {
 
   return {
     init, onReady,
-    getPlayers, getCards, getCategories,
-    getPlayer, getCard, getCategory,
+    getPlayers, getCards, getTrivia, getCategories, getRivalries, getVoteConfig,
+    getPlayer, getCard, getCategory, getRivalry, getCardTrivia,
     getPlayerCards, getCollectedPlayerCards,
     getPlayerProgress, getOverallProgress,
+    checkRivalryComplete, getCompletedRivalries,
     getCategoryLeaderboard,
   };
 })();

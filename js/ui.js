@@ -73,7 +73,6 @@ const UI = (() => {
     return div;
   }
 
-  // Build a full card detail modal
   function openCardModal(card, player) {
     closeModal();
     const col = Storage.getCollection();
@@ -89,6 +88,9 @@ const UI = (() => {
 
     const rarityColor = Gacha.getRarityColor(card.rarity);
     const triviaAnswered = Storage.hasTriviaAnswered(card.id);
+    // Get trivia from separated file via App
+    const trivia = App.getCardTrivia(card.id);
+
     const overlay = document.createElement('div');
     overlay.id = 'modal-overlay';
     overlay.innerHTML = `
@@ -107,26 +109,25 @@ const UI = (() => {
           <div class="modal-section-label">Historical Significance</div>
           <p class="modal-significance">${card.historicalSignificance}</p>
         </div>
+        ${trivia ? `
         <div class="modal-trivia ${triviaAnswered ? 'trivia-done' : ''}" id="trivia-block">
           <div class="modal-section-label">Knowledge Check</div>
-          ${triviaAnswered ? _renderTriviaResult(card) : _renderTriviaQuestion(card)}
-        </div>
+          ${triviaAnswered ? _renderTriviaResult(trivia) : _renderTriviaQuestion(card.id, trivia)}
+        </div>` : ''}
         ${fksAwarded > 0 ? `<div class="modal-fks-award">📖 +${fksAwarded} FKS awarded for reading</div>` : ''}
       </div>
     `;
     document.body.appendChild(overlay);
     requestAnimationFrame(() => overlay.classList.add('show'));
-
-    // Click outside to close
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
   }
 
-  function _renderTriviaQuestion(card) {
+  function _renderTriviaQuestion(cardId, trivia) {
     return `
-      <p class="trivia-question">${card.triviaQuestion}</p>
+      <p class="trivia-question">${trivia.question}</p>
       <div class="trivia-options">
-        ${card.triviaOptions.map((opt, i) => `
-          <button class="trivia-btn" onclick="UI.answerTrivia('${card.id}', ${i}, ${card.triviaAnswer})">
+        ${trivia.options.map((opt, i) => `
+          <button class="trivia-btn" onclick="UI.answerTrivia('${cardId}', ${i}, ${trivia.answer})">
             <span class="trivia-letter">${'ABCD'[i]}</span>${opt}
           </button>
         `).join('')}
@@ -134,30 +135,29 @@ const UI = (() => {
     `;
   }
 
-  function _renderTriviaResult(card) {
-    const result = Storage.getTriviaAnswered()[card.id];
-    const icon = result.correct ? '✅' : '❌';
-    const correct = card.triviaOptions[card.triviaAnswer];
-    return `<p class="trivia-result">${icon} ${result.correct ? 'Correct!' : `Incorrect — the answer was: <strong>${correct}</strong>`}</p>`;
+  function _renderTriviaResult(trivia) {
+    const result = Storage.getTriviaAnswered()[trivia.cardId];
+    const icon = result && result.correct ? '✅' : '❌';
+    const correct = trivia.options[trivia.answer];
+    return `<p class="trivia-result">${icon} ${result && result.correct ? 'Correct!' : `Incorrect — the answer was: <strong>${correct}</strong>`}</p>`;
   }
 
   function answerTrivia(cardId, selectedIdx, correctIdx) {
-    const card = App.getCard(cardId);
-    if (!card) return;
     if (Storage.hasTriviaAnswered(cardId)) return;
+    const trivia = App.getCardTrivia(cardId);
+    if (!trivia) return;
 
     const correct = selectedIdx === correctIdx;
     Storage.markTriviaAnswered(cardId, correct);
 
     const awarded = correct
-      ? FKS.award('TRIVIA_CORRECT', card.title)
-      : FKS.award('TRIVIA_WRONG', card.title);
+      ? FKS.award('TRIVIA_CORRECT', trivia.question.slice(0, 40))
+      : FKS.award('TRIVIA_WRONG', trivia.question.slice(0, 40));
 
-    // Update trivia block in modal
     const block = document.getElementById('trivia-block');
     if (block) {
       block.classList.add('trivia-done');
-      block.innerHTML = `<div class="modal-section-label">Knowledge Check</div>` + _renderTriviaResult(card);
+      block.innerHTML = `<div class="modal-section-label">Knowledge Check</div>` + _renderTriviaResult(trivia);
     }
 
     if (correct) {
@@ -167,7 +167,6 @@ const UI = (() => {
       toast(`❌ Not quite. +${awarded} FKS for trying`, 'error');
     }
 
-    // Update FKS display if present
     updateFKSDisplay();
   }
 

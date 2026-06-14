@@ -2,7 +2,7 @@
   "name": "GOAT League University",
   "short_name": "GLUniversity",
   "description": "Collect historical football cards, build your knowledge score, and vote for the Greatest of All Time.",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d0f14",
   "theme_color": "#f0a500",

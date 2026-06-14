@@ -1,0 +1,29 @@
+{
+  "weightMultipliers": [
+    { "minPlayers": 0, "multiplier": 0.30, "label": "30% — collect from 3+ players to increase" },
+    { "minPlayers": 3, "multiplier": 0.60, "label": "60% — collect from 5+ players to increase" },
+    { "minPlayers": 5, "multiplier": 0.80, "label": "80% — collect from 7+ players for full weight" },
+    { "minPlayers": 7, "multiplier": 1.00, "label": "100% — full influence active" }
+  ],
+  "categoryFKSThresholds": {
+    "overall":     0,
+    "attacker":   20,
+    "midfielder": 20,
+    "defender":   30,
+    "bigMatch":   50,
+    "technical":  30,
+    "leader":     40,
+    "influential":60
+  },
+  "voteDisplaySettings": {
+    "showCommunityBaseline": true,
+    "baselineDisclaimer": "Community scores are simulated baselines reflecting real-world polling consensus. Your vote weight is applied on top.",
+    "maxLeaderboardEntries": 10,
+    "showUserVoteBadge": true
+  },
+  "packSettings": {
+    "packSize": 5,
+    "cooldownHours": 6,
+    "pityLegendaryAfter": 40
+  }
+}

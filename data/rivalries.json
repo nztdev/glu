@@ -1,0 +1,52 @@
+[
+  {
+    "id": "messi_ronaldo",
+    "playerA": "messi",
+    "playerB": "ronaldo_cr7",
+    "name": "The Greatest Debate",
+    "era": "2008–present",
+    "narrative": "The defining sporting rivalry of the 21st century — two players who pushed each other to heights that may never be matched. For fifteen years, Messi and Ronaldo traded Ballon d'Or awards, La Liga titles, and Champions League trophies in a duopoly that froze out every other contender. Their rivalry is not one of animosity but of mutual elevation: neither would have been as extraordinary without the other as a perpetual benchmark. The debate they created will outlast both careers.",
+    "context": "Six Ballon d'Ors each during their peak overlap. Both scored over 700 career goals. Messi won the 2022 World Cup; Ronaldo never did. The argument has no resolution — which is precisely why it endures.",
+    "bonusFKS": 20
+  },
+  {
+    "id": "pele_maradona",
+    "playerA": "pele",
+    "playerB": "maradona",
+    "name": "Two Gods, Two Eras",
+    "era": "1958–1990",
+    "narrative": "The original GOAT debate. Pelé represented football's romantic ideal — the boy from poverty who brought joy to the world, three World Cups, and a thousand goals. Maradona represented something rawer — the flawed genius, the rebel, the man who dragged a limited Argentina squad to the World Cup on his back through sheer will. They played in different eras, making direct comparison impossible. That impossibility is what makes the debate eternal.",
+    "context": "Pelé won three World Cups and scored approximately 1,000 career goals. Maradona won one World Cup (1986) and was arguably the single most dominant player in any tournament in history. They met, respected each other, and argued publicly about who was greater. Neither conceded.",
+    "bonusFKS": 20
+  },
+  {
+    "id": "cruyff_beckenbauer",
+    "playerA": "cruyff",
+    "playerB": "beckenbauer",
+    "name": "Total Football vs The Kaiser",
+    "era": "1965–1983",
+    "narrative": "The tactical rivalry of the 1970s: two players who redefined their positions and two philosophies that defined an era. Cruyff's Total Football — fluid, expressive, position-less — against Beckenbauer's libero system — structured, efficient, counter-attacking. Their 1974 World Cup Final clash produced the era's defining match. The Netherlands played the most beautiful football the tournament had seen; West Germany won 2-1. The argument about which approach to football is superior continues in every coaching debate today.",
+    "context": "Cruyff won three European Cups with Ajax and three Ballon d'Ors. Beckenbauer won three European Cups with Bayern and the World Cup as both player and manager. Cruyff's philosophy eventually conquered European football through Barcelona. Beckenbauer's pragmatism won the trophy.",
+    "bonusFKS": 20
+  },
+  {
+    "id": "ronaldinho_messi",
+    "playerA": "ronaldinho",
+    "playerB": "messi",
+    "name": "The Torch and the Flame",
+    "era": "2004–2008",
+    "narrative": "Not a rivalry but a succession — and one of football's most poignant stories. Ronaldinho arrived at Barcelona as the world's best player and became Messi's mentor and protector. He personally welcomed the shy 17-year-old from Argentina, included him in training moves, and created space for his confidence to grow. By 2008, Messi had overtaken him. Ronaldinho never reached those heights again. He handed the torch to the player who would burn brighter than anyone.",
+    "context": "Ronaldinho won the 2004 and 2005 Ballon d'Or. Messi won his first in 2009 — the year after Ronaldinho left. Their overlap at Barcelona (2004–2008) is the most important mentor relationship in modern football.",
+    "bonusFKS": 15
+  },
+  {
+    "id": "ronaldo_r7_zidane",
+    "playerA": "ronaldo_r7",
+    "playerB": "zidane",
+    "name": "The Galácticos Era",
+    "era": "2002–2006",
+    "narrative": "At Real Madrid between 2002 and 2006, two of the greatest players in history shared a dressing room as part of the Galácticos project — the most audacious collection of talent ever assembled. Ronaldo brought explosive goalscoring; Zidane brought creative mastery. They complemented each other perfectly and won La Liga in 2003. Their partnership represented football's attempt to answer an impossible question: what happens when you put all the world's best players in one team? The answer was compelling, chaotic, and ultimately unresolved.",
+    "context": "Together at Real Madrid: one La Liga title (2002–03), one Champions League near-miss. Both were at the tail end of their peak form — Ronaldo managing injuries, Zidane winding down before his final World Cup in 2006. Their coexistence produced some of the most watched football of the era.",
+    "bonusFKS": 15
+  }
+]

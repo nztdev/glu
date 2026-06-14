@@ -4,7 +4,7 @@ The files in the `/data` directory — including `players.json`, `cards.json`,
 and `categories.json` — contain original written content: player biographies,
 card stories, historical analysis, trivia questions, and editorial copy.
 
-This content is **copyright © 2026 GOAT League University Contributors.
+This content is **copyright © 2025 GOAT League University Contributors.
 All rights reserved.**
 
 It is not covered by the MIT licence that applies to the project's code.

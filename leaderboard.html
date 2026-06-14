@@ -367,33 +367,59 @@
     function renderRivalries() {
       const grid = document.getElementById('rivalry-grid');
       grid.innerHTML = '';
-      const rivalries = FKS.getAllRivalries();
-      const completedRivalries = FKS.getCompletedRivalries(App.getCards());
-      const completedKeys = completedRivalries.map(([a, b]) => `${a}_${b}`);
+      const rivalries = App.getRivalries();
 
-      rivalries.forEach(([idA, idB]) => {
-        const playerA = App.getPlayer(idA);
-        const playerB = App.getPlayer(idB);
+      rivalries.forEach(rivalry => {
+        const playerA = App.getPlayer(rivalry.playerA);
+        const playerB = App.getPlayer(rivalry.playerB);
         if (!playerA || !playerB) return;
 
-        const isComplete = completedKeys.includes(`${idA}_${idB}`);
-        const progA = App.getPlayerProgress(idA);
-        const progB = App.getPlayerProgress(idB);
+        const isComplete = App.checkRivalryComplete(rivalry.id);
+        const progA = App.getPlayerProgress(rivalry.playerA);
+        const progB = App.getPlayerProgress(rivalry.playerB);
 
         const card = document.createElement('div');
         card.className = 'rivalry-card';
-        card.innerHTML = `
+        card.style.flexDirection = 'column';
+        card.style.gap = '.75rem';
+
+        const top = document.createElement('div');
+        top.style.cssText = 'display:flex;align-items:center;gap:.75rem;';
+        top.innerHTML = `
           <div style="font-size:1.5rem">${isComplete ? '⚔️' : '🔒'}</div>
-          <div class="rivalry-names">
-            <div>${playerA.name}</div>
-            <div class="rivalry-vs">vs</div>
-            <div>${playerB.name}</div>
-            ${!isComplete ? `<div style="font-size:.65rem;color:var(--text-3);margin-top:.3rem">${progA.collected}/${progA.total} · ${progB.collected}/${progB.total} cards</div>` : ''}
+          <div class="rivalry-names" style="flex:1">
+            <div style="font-size:.95rem">${playerA.name} <span style="color:var(--text-3);font-size:.75rem">vs</span> ${playerB.name}</div>
+            <div style="font-size:.65rem;color:var(--text-3);margin-top:.15rem">${rivalry.era}</div>
           </div>
           ${isComplete
             ? '<span class="rivalry-complete-badge">✅ Unlocked</span>'
-            : '<span class="rivalry-locked-badge">In Progress</span>'}
+            : `<span class="rivalry-locked-badge">${progA.collected + progB.collected}/${progA.total + progB.total} cards</span>`}
         `;
+        card.appendChild(top);
+
+        // Show name always, narrative only when complete
+        const nameEl = document.createElement('div');
+        nameEl.style.cssText = 'font-size:.8rem;font-weight:700;color:var(--accent)';
+        nameEl.textContent = rivalry.name;
+        card.appendChild(nameEl);
+
+        if (isComplete) {
+          const narrative = document.createElement('p');
+          narrative.style.cssText = 'font-size:.78rem;color:var(--text-2);line-height:1.6;margin:0';
+          narrative.textContent = rivalry.narrative;
+          card.appendChild(narrative);
+
+          const bonus = document.createElement('div');
+          bonus.style.cssText = 'font-size:.7rem;color:var(--green);margin-top:.25rem';
+          bonus.textContent = `+${rivalry.bonusFKS} FKS bonus awarded`;
+          card.appendChild(bonus);
+        } else {
+          const hint = document.createElement('div');
+          hint.style.cssText = 'font-size:.75rem;color:var(--text-3)';
+          hint.textContent = 'Complete both timelines to unlock the full rivalry story.';
+          card.appendChild(hint);
+        }
+
         grid.appendChild(card);
       });
     }
@@ -404,7 +430,7 @@
   </footer>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js")
+      navigator.serviceWorker.register("service-worker.js", { scope: "./" })
         .catch(e => console.warn("SW registration failed:", e));
     }
   </script>

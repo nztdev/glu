@@ -85,33 +85,39 @@ const FKS = (() => {
     return playerCards.every(c => (collection[c.id] || 0) > 0);
   }
 
+  // Rivalry checks now delegate to App which loads from rivalries.json
+  // These stubs remain for backwards compatibility during init
   function checkRivalryComplete(playerA, playerB, allCards) {
     return checkTimelineComplete(playerA, allCards) &&
            checkTimelineComplete(playerB, allCards);
   }
 
-  const RIVALRIES = [
-    ['messi', 'ronaldo_cr7'],
-    ['pele', 'maradona'],
-    ['cruyff', 'beckenbauer'],
-    ['ronaldinho', 'messi'],
-    ['ronaldo_r7', 'zidane'],
-  ];
-
   function getCompletedRivalries(allCards) {
-    return RIVALRIES.filter(([a, b]) => checkRivalryComplete(a, b, allCards));
+    // Delegate to App once loaded; during early init return empty
+    if (typeof App !== 'undefined' && App.getRivalries) {
+      return App.getRivalries()
+        .filter(r => checkRivalryComplete(r.playerA, r.playerB, allCards))
+        .map(r => [r.playerA, r.playerB]);
+    }
+    return [];
   }
 
-  function getAllLevels() { return LEVELS; }
-  function getAllRewards() { return REWARDS; }
-  function getAllRivalries() { return RIVALRIES; }
+  function getAllRivalries() {
+    if (typeof App !== 'undefined' && App.getRivalries) {
+      return App.getRivalries().map(r => [r.playerA, r.playerB]);
+    }
+    return [];
+  }
+
+  function getAllLevels()   { return LEVELS; }
+  function getAllRewards()  { return REWARDS; }
 
   return {
     getLevel, getNextLevel, getProgressToNext,
     award, getBreadth, getVoteWeight,
     checkTimelineComplete, checkRivalryComplete,
-    getCompletedRivalries,
-    getAllLevels, getAllRewards, getAllRivalries,
+    getCompletedRivalries, getAllRivalries,
+    getAllLevels, getAllRewards,
     REWARDS
   };
 })();
