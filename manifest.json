@@ -8,6 +8,6 @@
   "theme_color": "#f0a500",
   "orientation": "portrait-primary",
   "icons": [
-    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+    { "src": "./glulogo.jpg", "sizes": "any", "type": "image/jpeg" }
   ]
 }
